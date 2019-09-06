@@ -1,0 +1,24 @@
+{
+  "name": "babel-plugin-owoifier",
+  "version": "0.1.0",
+  "description": "owoifies your javascwipt ^w^",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "ava test/first.test.js"
+  },
+  "keywords": [
+    "owo",
+    "owoifier"
+  ],
+  "author": "Edwin Kofler",
+  "license": "MIT",
+  "ava": {
+    "babel": false,
+    "compileEnhancements": false
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "ava": "^2.3.0"
+  }
+}
