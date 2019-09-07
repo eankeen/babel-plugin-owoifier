@@ -1,18 +1,25 @@
+let keywords = require("./keys");
+
 module.exports = function({ types: t }) {
   let count = 0;
-  let keywords = new Set(["alfa", "bravo"])
   return {
     name: "owoifier",
     visitor: {
       StringLiteral: {
         enter(path) {
-          keywords.forEach(value => {
-            if(t.isStringLiteral(path.node, { value })){
-              path.node.value = "sierra";
-              console.log(path.node.value);
-              count++;
+          keywords.forEach((value, key) => {
+            let nodeValue = path.node.value;
+            if(nodeValue.includes(key)) {
+              let indexOfKey = nodeValue.indexOf(key);
+              let low = nodeValue.slice(0, indexOfKey);
+              let high = nodeValue.slice(indexOfKey + key.length);
+
+              console.log("debug", low, value, high);
+              path.node.value = low + value + high;
             }
-          })
+            console.log(nodeValue);
+            count++;
+          });
         }
       }
     },

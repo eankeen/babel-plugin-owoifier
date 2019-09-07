@@ -1,6 +1,6 @@
 const babel = require("@babel/core");
 
-let input = `let b = "alfa";`;
+let input = `let b = "promise";`;
 
 babel.transformAsync(input, {
   plugins: ["../index.js"],
