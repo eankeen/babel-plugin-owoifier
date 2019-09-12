@@ -15,7 +15,10 @@
   "license": "MIT",
   "ava": {
     "babel": false,
-    "compileEnhancements": false
+    "compileEnhancements": false,
+    "require": [
+      "esm"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

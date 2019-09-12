@@ -1,6 +1,6 @@
-let keywords = require("./keys");
+import keywords from "./keys";
 
-module.exports = function({ types: t }) {
+export default function({ types: t }) {
   let count = 0;
   return {
     name: "owoifier",
